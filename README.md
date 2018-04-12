@@ -194,3 +194,10 @@ terraform apply
 
 ## Дополнительное задание со *
 Добавлены скрипты динамического inventory для окружений prod и stage (файлы yatadis.py и dynamic_inventory.sh). Для запуска необходимо выполнить команду из директории ansible для необходимого окружения, например для stage: `ansible-playbook -i environments/stage/dynamic_inventory.sh playbooks/site.yml`
+
+
+## Дополнительное задание с **
+Добавлены следующие проверки в .travis.yml
+- packer validate для всех шаблонов;
+- terraform validate и tflint для окружений stage и prod;
+- ansible-lint для плейбуков ansible.

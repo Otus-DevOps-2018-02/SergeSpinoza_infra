@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Otus-DevOps-2018-02/SergeSpinoza_infra.svg?branch=ansible-3)](https://travis-ci.org/Otus-DevOps-2018-02/SergeSpinoza_infra)
+
+
 # SergeSpinoza_infra
 SergeSpinoza Infra repository
 
@@ -201,6 +204,3 @@ terraform apply
 - packer validate для всех шаблонов;
 - terraform validate и tflint для окружений stage и prod;
 - ansible-lint для плейбуков ansible.
-
-[![Build Status](https://travis-ci.org/Otus-DevOps-2018-02/SergeSpinoza_infra.svg?branch=ansible-3)](https://travis-ci.org/Otus-DevOps-2018-02/SergeSpinoza_infra)
-

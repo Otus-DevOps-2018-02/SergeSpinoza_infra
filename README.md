@@ -204,3 +204,25 @@ terraform apply
 - packer validate для всех шаблонов;
 - terraform validate и tflint для окружений stage и prod;
 - ansible-lint для плейбуков ansible.
+
+
+# Homework-12
+
+## Основное задание
+- Установлен Vagrant и добавлен Vagrantfile для развертывания среды для локальной разработки ролей Ansible;
+  - для запуска необходимо выполнить команду `vagrant up`.
+- Доработаны роли app и db;
+- Установлены и настроены Molecule для создани машин и тестирования и Testinfra для написания тестов;
+  - Для тестирования роли db необходимо в каталоге ansible/roles/db выполнить команды:
+``` 
+$ molecule init scenario --scenario-name default -r db -d vagrant
+$ molecule create
+$ molecule converge
+$ molecule verify
+```
+- Написан тест к роли db для проверки того, что БД слушает по нужному порту (27017);
+- Использованы роли db и app в плейбуках packer_db.yml и packer_app.yml;
+
+
+## Дополнительное задание со * (первая половина)
+- Дополнена конфигурация Vagrant для корректной работы проксирования приложения с помощью nginx.
